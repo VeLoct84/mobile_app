@@ -6,6 +6,9 @@ import glob
 from datetime import datetime
 from pathlib import Path
 import random
+from hoverable import HoverBehavior
+from kivy.uix.image import Image
+from kivy.uix.behaviors import ButtonBehavior
 
 Builder.load_file('design.kv')
 
@@ -64,7 +67,7 @@ class LoginScreenSuccess(Screen):
         self.manager.current = "login_screen"
 
     # funtion to collect feeling input and generate result
-    def get_quotes(self, feel):
+    def get_quote(self, feel):
         feel = feel.lower()
         available_feeling = glob.glob("quote/*txt")
 
@@ -75,9 +78,13 @@ class LoginScreenSuccess(Screen):
         if feel in available_feeling:
             with open(f"quote/{feel}.txt") as file:
                 quotes = file.readlines()
-            self.ids.result.txt = random.choice(quotes)
+            self.ids.quote.txt = random.choice(quotes)
         else:
-            self.ids.result.txt = "Try another feeling"
+            self.ids.quote.txt = "Try another feeling"
+
+
+class ImageButton(HoverBehavior, Image, ButtonBehavior):
+    pass
 
 
 # start the program
