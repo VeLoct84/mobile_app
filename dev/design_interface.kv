@@ -1,0 +1,59 @@
+<LoginScreen>:
+	GridLayout:
+		cols: 1
+		padding: 15, 15
+		spacing: 10, 0
+		GridLayout:
+			cols: 1
+			Label:
+				text: 'DeliApp'
+				font_size: '20sp'
+			TextInput:
+				id: username
+				hint_text: 'Username'
+			TextInput:
+				id: password
+				hint_text: 'Password'
+			Button:
+				text: 'Login'
+				on_press: root.login()
+			Label:
+				text: 'New user? Register Here!'
+
+<MainMenu>:
+	GridLayout:
+		cols: 1
+		GridLayout:
+			cols: 2
+			Button:
+				text: "Add job"
+				on_press: root.create_job(root.ids.barcode.text)
+			Button:
+				text: "Action"
+			TextInput:
+				id: barcode
+				hint_text: "Enter number"
+			GridLayout:
+				cols: 1
+				Label:
+					id: preview
+					text: ""
+
+<SignupSuccess>:
+	GridLayout:
+		cols: 1
+		GridLayout:
+			cols: 1
+			Label:
+				text: "Signup successfully!"
+			Button:
+				text: "Home"
+				on_press: root.go_to_login()
+
+<RootWidget>:
+	LoginScreen:
+		name: 'login_screen'
+	SignupSuccess:
+		name: 'signup_ok'
+	MainMenu:
+		name: 'main_menu'
