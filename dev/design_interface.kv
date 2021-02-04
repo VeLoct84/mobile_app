@@ -11,9 +11,11 @@
 			TextInput:
 				id: username
 				hint_text: 'Username'
+				multiline: False
 			TextInput:
 				id: password
 				hint_text: 'Password'
+				multiline: False
 			Button:
 				text: 'Login'
 				on_press: root.login()
@@ -33,6 +35,7 @@
 			TextInput:
 				id: barcode
 				hint_text: "Enter number"
+				multiline: False
 			GridLayout:
 				cols: 1
 				Label:
