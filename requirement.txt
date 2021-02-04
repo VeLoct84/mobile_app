@@ -1,9 +1,38 @@
-certifi==2020.12.5
-chardet==4.0.0
-docutils==0.16
-idna==2.10
-Kivy==2.0.0
-Kivy-Garden==0.1.4
-Pygments==2.7.4
-requests==2.25.1
-urllib3==1.26.2
+Package            Version
+------------------ ---------
+appdirs            1.4.4
+blessings          1.7
+bpython            0.21
+buildozer          1.2.0
+certifi            2020.12.5
+chardet            4.0.0
+colorama           0.4.4
+curtsies           0.3.5
+cwcwidth           0.1.2
+Cython             0.29.21
+distlib            0.3.1
+docutils           0.16
+filelock           3.0.12
+greenlet           1.0.0
+idna               2.10
+importlib-metadata 3.4.0
+Jinja2             2.11.2
+Kivy               2.0.0
+Kivy-Garden        0.1.4
+MarkupSafe         1.1.1
+pep517             0.6.0
+pexpect            4.8.0
+pip                21.0.1
+ptyprocess         0.7.0
+Pygments           2.7.4
+pytoml             0.1.21
+pyxdg              0.27
+requests           2.25.1
+setuptools         47.1.0
+sh                 1.14.1
+six                1.15.0
+toml               0.10.2
+typing-extensions  3.7.4.3
+urllib3            1.26.2
+virtualenv         20.4.0
+zipp               3.4.0
