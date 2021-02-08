@@ -4,3 +4,4 @@ __pycache__
 buildozer.spec
 .buildozer
 users.json
+bin/
